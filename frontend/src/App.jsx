@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
 import LoginPage from './pages/LoginPage.jsx';
 import DashboardPage from './pages/DashboardPage.jsx';
+import NotesPage from './pages/NotesPage.jsx';
 
 function App() {
   const [userEmail, setUserEmail] = useState(null);
@@ -43,6 +44,7 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage onLogin={setUserEmail} />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/notes" element={<NotesPage />} />
         </Routes>
       </main>
     </div>

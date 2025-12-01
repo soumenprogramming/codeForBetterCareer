@@ -21,6 +21,17 @@ export function loginUser({ email, password }) {
   );
 }
 
+export function fetchCourses() {
+  return api.get('/api/v1/courses');
+}
+
+export function fetchNotes(featured = false, subject = null) {
+  const params = {};
+  if (featured) params.featured = true;
+  if (subject) params.subject = subject;
+  return api.get('/api/v1/notes', { params });
+}
+
 export default api;
 
 
